@@ -1,0 +1,21 @@
+package com.tasklist.dao;
+
+import org.springframework.stereotype.Component;
+
+import com.tasklist.bean.Task;
+
+@Component
+public class TaskListDao {
+	
+	
+	private static String ADD_TASK = "insert into taskdb.tasklist"
+			+ "(taskid, taskdescription, taskcompletionstatus,userid)"
+			+ "values(nextval(taskid),?,?,"
+			+ "(select userid from taskdb.userlist where username=?)";
+	
+	
+	public void addTask(Task task) {
+		
+	}
+
+}

@@ -1,6 +1,8 @@
-com\tasklist\configuration\TaskListInitializer.class
+com\tasklist\dao\TaskListDao.class
 com\tasklist\bean\Task.class
 com\tasklist\configuration\CORSFilter.class
 com\tasklist\configuration\TaskListConfiguration.class
 com\tasklist\controller\TaskListController.class
 com\tasklist\configuration\DataSourceConfig.class
+com\tasklist\service\TaskListService.class
+com\tasklist\configuration\TaskListInitializer.class

@@ -11,12 +11,14 @@
 		function init(){
 			vm.message = "Hello World"; 
 			class Task{
-				constructor(userName){
+				constructor(userName, taskDescription, taskStatus){
 					this.userName = userName;
+					this.taskDescription = taskDescription;
+					this.taskStatus = taskStatus;
 				}
 			}
 			
-			const task = new Task("ashok");
+			const task = new Task("joliver", "Fold laundary", 'N');
 			TaskListService.addTask(task);
 				
 		}
