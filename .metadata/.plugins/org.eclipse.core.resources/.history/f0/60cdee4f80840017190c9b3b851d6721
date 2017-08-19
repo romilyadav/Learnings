@@ -1,0 +1,19 @@
+(function(){
+	angular.module('HelloWorld')
+			.factory('HelloWorld2Service', HelloWorld2Service);
+	
+	HelloWorld2Service.$inject = ['$resource']
+	function HelloWorld2Service($resource){
+		
+		
+		
+		function addTask(task){
+			return $resource('http://localhost:8080/NorthWestern/addTask');
+		}
+		
+		return {
+			addTask
+		}
+		
+	}
+})();

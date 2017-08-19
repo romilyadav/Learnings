@@ -1,0 +1,33 @@
+(function(){
+	angular.module('HelloWorld')
+			.controller('HelloWorldController', HelloWorldController);
+	
+	HelloWorldController.$inject = ['$scope','HelloWorldService']
+	function HelloWorldController($scope, HelloWorldService){
+		var vm = this;
+		
+		init();
+		
+		
+
+		function init(){
+			class Task {
+				constructor(userName, task){
+					this.userName = userName;
+					this.task = task;
+				}
+			}
+			
+			const task = new Task("ashok", "Prepare Lunch");
+//			HelloWorldService.addTask(task).then(function(data){
+//				vm.display = data.data;
+//			});
+			
+			HelloWorldService.addUser(task);
+			HelloWorldService.deleteUser(task);
+			
+		}
+		
+		
+	}
+})();

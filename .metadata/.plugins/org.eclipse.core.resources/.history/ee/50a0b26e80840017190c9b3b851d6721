@@ -1,0 +1,42 @@
+(function(){
+	angular.module('HelloWorld')
+			.factory('HelloWorldService', HelloWorldService);
+	
+	HelloWorldService.$inject = ['$http']
+	function HelloWorldService($http){
+		
+		function addTask(task){
+			return $http.post("http://localhost:8080/NorthWestern/addTask", task);
+		}
+		
+		
+		function addUser(task){
+			class User {
+				constructor(userName, userDescription){
+					this.userName = userName;
+					this.userDescription = userDescription;
+				}
+			}
+			const user = new User("ashok", "test user")
+			return $http.post("http://localhost:8080/NorthWestern/addUser", user);
+		}
+		
+		function deleteUser(task){
+			class User {
+				constructor(userId, userName, userDescription){
+					this.userId = userId;
+					this.userName = userName;
+					this.userDescription = userDescription;
+				}
+			}
+			const user = new User(1, "ashok", "test user")
+			return $http.post("http://localhost:8080/NorthWestern/addUser", user);
+		}
+		
+		return {
+			addTask,
+			addUser,
+			deleteUser
+		}
+	}
+})();

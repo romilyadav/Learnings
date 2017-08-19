@@ -1,0 +1,5 @@
+package com.tasklist.bean;
+
+public class Task {
+
+}

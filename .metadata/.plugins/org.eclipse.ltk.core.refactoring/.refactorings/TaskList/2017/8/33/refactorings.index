@@ -1,0 +1,15 @@
+1503104793240	Delete element
+1503105097184	Rename type 'HelloWorldConfiguration'
+1503105114099	Rename type 'HelloWorldInitializer'
+1503105390822	Delete element
+1503105410783	Rename resource 'helloworld.service.js'
+1503105421409	Rename resource 'helloworld.controller.js'
+1503105434088	Delete element
+1503106946569	Delete element
+1503107208008	Delete element
+1503107228998	Delete element
+1503108189679	Rename resource 'helloworld.controller.js'
+1503108202983	Rename resource 'helloworld.service.js'
+1503108406388	Rename type 'HelloWorldConfiguration'
+1503108425898	Rename type 'HelloWorldInitializer'
+1503109510062	Encapsulate field 'taskId'

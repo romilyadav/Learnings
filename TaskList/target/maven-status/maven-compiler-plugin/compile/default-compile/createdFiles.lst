@@ -1,0 +1,6 @@
+com\tasklist\configuration\TaskListInitializer.class
+com\tasklist\bean\Task.class
+com\tasklist\configuration\CORSFilter.class
+com\tasklist\configuration\TaskListConfiguration.class
+com\tasklist\controller\TaskListController.class
+com\tasklist\configuration\DataSourceConfig.class

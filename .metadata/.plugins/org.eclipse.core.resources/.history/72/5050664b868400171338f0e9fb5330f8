@@ -1,0 +1,16 @@
+package com.tasklist.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class TaskListController {
+	
+	@RequestMapping(value="/addTask", method=RequestMethod.POST)
+	public void addTask(@RequestBody Task task) throws Exception{
+		
+	}
+	
+
+}
