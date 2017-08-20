@@ -1,0 +1,44 @@
+(function(){
+	angular.module('TaskList')
+			.controller('TaskListController', TaskListController);
+	
+	TaskListController.$inject = ['TaskListService']
+	function TaskListController(TaskListService){
+		var vm = this;
+		class Task{
+			constructor(userName, taskDescription, taskStatus){
+				this.userName = userName,
+				this.taskDescription = taskDescription;
+				this.taskStatus = taskStatus;
+			}
+		}
+		
+		init();
+		
+		function init(){
+			vm.message = "Hello World"; 
+			markTaskComplete();
+		}
+		
+		function markTaskComplete(){
+			const task = new Task(5);
+			TaskListService.markTaskComplete(task);
+		}
+		
+		function addTask(){
+			const task = new Task("joliver", "Fold laundary", 'N');
+			TaskListService.addTask(task);
+		}
+		
+		function deleteTask(){
+			const task = new Task(5);
+			TaskListService.deleteTask(task);
+		}
+		
+		function getTasks(){
+			const task = new Task(2, "joliver");
+			TaskListService.getTasks(task);
+		}
+
+	}
+})();

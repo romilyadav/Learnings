@@ -15,5 +15,17 @@ public class TaskListService {
 	public void addTask(Task task) throws Exception {
 		taskListDao.addTask(task);
 	}
+	
+	public void markTaskComplete(Integer taskId) throws Exception {
+		taskListDao.markTaskComplete(taskId);
+	}
+	
+	public void deleteTask(Integer taskId) throws Exception{
+		taskListDao.deleteTask(taskId);
+	}
+	
+	public void getTasks(String userName) throws Exception{
+		taskListDao.getTasks(userName);
+	}
 
 }

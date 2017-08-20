@@ -1,0 +1,37 @@
+package com.tasklist.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tasklist.bean.Task;
+import com.tasklist.service.TaskListService;
+
+
+
+@RestController
+public class TaskListController {
+	
+	@Autowired
+	TaskListService taskListService;
+	
+	@RequestMapping(value="/addTask", method=RequestMethod.POST)
+	public void addTask(@RequestBody Task task) throws Exception{
+		taskListService.addTask(task);
+	}
+	
+	
+	@RequestMapping(value="/markTaskComplete", method=RequestMethod.POST)
+	public void markTaskComplete(@RequestBody Task task) throws Exception{
+		taskListService.markTaskComplete(task);
+	}
+	
+	
+	@RequestMapping(value="/deleteTask", method=RequestMethod.POST)
+	public void deleteTask(@RequestBody Task task) throws Exception {
+		taskListService.deleteTask(task);
+	}
+
+}
