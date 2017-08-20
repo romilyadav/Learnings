@@ -6,7 +6,7 @@ The project is simple Task list management system built to display the use of RE
 5. Eclipse
 6. PostgreSQL
 7. JDBC
-The application runs on Apache Tomcat server.
+The application runs on Apache Tomcat server. Maven is used to build the war file.
 As of 8/20/2017, the application does not have front end page to access the list. The application has been tested by writing service calls from AngularJS when the home page is loaded. The database is made up of the following two tables:
 1. tasklist
 2. userlist.

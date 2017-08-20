@@ -1,5 +1,9 @@
 package com.tasklist.bean;
 
+/**
+ * Bean that represents a task.
+ *
+ */
 public class Task {
 	private int taskId;
 	private String userName;
